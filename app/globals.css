@@ -2,20 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /*Home*/
+  .fullcontainer {
+    @apply no-scrollbar h-screen w-full m-auto p-6 bg-tetiary;
+  }
+    /*Navbar*/
+  .navbar {
+    @apply flex justify-between items-center h-24 bg-primary rounded-[20px] px-6;
+  }
+  .navbar-firstname {
+    @apply text-[25px] uppercase italic text-tetiary;
+  }
+  .navbar-lastname {
+    @apply text-[25px] uppercase text-tetiary font-semibold;
+  }
+  .navbar-links-container{
+   @apply flex items-center gap-x-6
+  }
+  .navbar-links{
+    @apply text-base uppercase
+  }
 }
