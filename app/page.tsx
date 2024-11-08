@@ -1,14 +1,13 @@
-import Navbar from '@/components/Navbar'
-import Bentilo from "@/components/Bentilo";
-import Link from 'next/link'
-import React from 'react'
+import Navbar from "@/components/Navbar";
+import Bento from "@/components/Bento";
+import React from "react";
 const page = () => {
   return (
-   <main className='fullcontainer'>
-    <Navbar/>
-    <Bentilo/>
-   </main>
-  )
-}
+    <main className="fullcontainer">
+      <Navbar />
+      <Bento />
+    </main>
+  );
+};
 
-export default page
+export default page;
